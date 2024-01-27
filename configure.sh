@@ -49,12 +49,14 @@ cd /mnt
 
 NW_LOCATION=`find . -wholename *0/etc/NetworkManager/system-connections`
 # find the connection you wish to use in /etc/NetworkManager/system-connections/ and copy it over 
-echo copying /tmp/$CONN to $NW_LOCATION/$CONN
+echo "copying /tmp/$CONN"
+echo "to $NW_LOCATION/$CONN"
 cp /tmp/$CONN $NW_LOCATION/$CONN
 
 
 echo "chmod $NW_LOCATION/$CONN"
 chmod 600 $NW_LOCATION/$CONN
+
 cd
 umount /mnt
 
